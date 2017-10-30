@@ -1,0 +1,16 @@
+*{
+    margin:0;
+}
+.fl{
+    float: left;
+}
+
+.tc{
+    text-align: center;
+}
+
+/*插件里的样式*/
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #fff;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel='stylesheet' href='css/main.css' />
+    <link rel='stylesheet' href='css/swiper.min.css' />
+    <link rel='stylesheet' href='css/init.css' />
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/rem.js" type="text/javascript"></script>
+    <script src="js/swiper.min.js" type="text/javascript"></script>
+    <script src="js/vue.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- header-fixed -->
+        <headertemp></headertemp>
+        
+        <div class="frm">
+            <!-- top-slider -->
+            <div class="top-slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div v-for="item in sliderdata" class="swiper-slide"><a :href="item.link_url"><img  :src="item.img" alt=""></a></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <!-- cen-pay-today-money -->
+            <div class="center-active">
+                <div class="fl three-btn">
+                    <img src="images/indexfukuan@2x.png" alt="">
+                    <div><i>付款</i></div>
+                </div>
+                <div class="fl three-btn">
+                    <img src="images/indexjinritehui@2x.png" alt="">
+                    <div><i>今日特惠</i></div>
+                </div>
+                <div class="fl three-btn">
+                    <img src="images/indexzhuanqian@2x.png" alt="">
+                    <div><i>赚钱</i></div>
+                </div>
+            </div>
+
+            <!-- flex-part -->
+            <div class="flex-btn">
+                <div v-for="item in flexPart" class="fl-btn">
+                    <div class="fl-img"><a href=""><img :src="item.img" alt=""></a></div>
+                    <div class="fl-name tc">{{item.name}}</div>
+                </div>
+            </div>
+
+            <!-- choice-shop -->
+            <div class="choice-shop">
+                <div class="shop-title tc">精选店铺</div>
+                <div class="shops">
+                    <div></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/main.js" type="text/javascript"></script>
+</body>
+
+</html>
